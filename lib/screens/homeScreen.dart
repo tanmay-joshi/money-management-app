@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:money_app/comman/bottomNav.dart';
+import 'package:money_app/comman/bottomSheetInput.dart';
 import 'package:money_app/comman/transactions.dart';
 
 import '../comman/monthlyExpensesCard.dart';
@@ -20,40 +21,8 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/addIncome');
-                  },
-                  child: Container(
-                    margin: EdgeInsets.all(8),
-                    padding: EdgeInsets.fromLTRB(40, 12, 40, 12),
-                    child: Text("Add Income"),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          width: 1,
-                          color: Colors.green[600],
-                        ),
-                        borderRadius: BorderRadius.circular(24)),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/addExpense');
-                  },
-                  child: Container(
-                    margin: EdgeInsets.all(8),
-                    padding: EdgeInsets.fromLTRB(40, 12, 40, 12),
-                    child: Text("Add Expense"),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          width: 1,
-                          color: Colors.deepOrange[600],
-                        ),
-                        borderRadius: BorderRadius.circular(24)),
-                  ),
-                ),
+                BottomSheetInput(false),
+                BottomSheetInput(true),
               ],
             ),
             Transactions()

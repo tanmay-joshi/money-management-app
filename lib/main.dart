@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_app/comman/bottomSheetInput.dart';
 import 'package:money_app/providers/model.dart';
 import 'package:money_app/screens/addExpenseScreen.dart';
 import 'package:provider/provider.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
           "/": (context) => HomeScreen(),
           "/transactions": (context) => TransactionScreen(),
           '/addExpense': (context) => AddExpenseScreen(),
-          '/addIncome': (context) => AddIncomeScreen()
+          '/addIncome': (context) => AddIncomeScreen(),
+          //'/bottomSheet': (context) => BottomSheetInput(),
         },
       ),
     );
