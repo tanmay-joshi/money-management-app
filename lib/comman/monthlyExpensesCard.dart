@@ -9,7 +9,10 @@ class MonthlyExpensesCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(12)),
-          color: Colors.blue[600],
+          gradient: LinearGradient(
+              colors: [Colors.blue[200], Colors.blue[600]],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight),
           boxShadow: [
             BoxShadow(
                 offset: Offset(0, 12),

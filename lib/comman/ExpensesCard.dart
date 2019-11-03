@@ -13,6 +13,15 @@ class ExpensesCard extends StatelessWidget {
       padding: EdgeInsets.all(8),
       margin: EdgeInsets.all(16),
       decoration: BoxDecoration(
+          gradient: transaction.expense
+              ? LinearGradient(
+                  colors: [Colors.red[200], Colors.red[600]],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight)
+              : LinearGradient(
+                  colors: [Colors.green[200], Colors.green[600]],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight),
           boxShadow: [
             BoxShadow(
                 offset: Offset(0, 8),
@@ -20,12 +29,7 @@ class ExpensesCard extends StatelessWidget {
                 spreadRadius: -16,
                 color: Colors.black54)
           ],
-          border: Border.all(
-            width: 1,
-            color: transaction.expense
-                ? Colors.deepOrange[600]
-                : Colors.green[600],
-          ),
+          // border: Border.all(width: 1, color: Colors.black26),
           borderRadius: BorderRadius.circular(8),
           color: Colors.white),
       child: Column(
@@ -34,7 +38,10 @@ class ExpensesCard extends StatelessWidget {
           Text(
             transaction.type,
             style: TextStyle(
-                fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600),
+                fontSize: 16,
+                color: Colors.grey[900],
+                fontWeight: FontWeight.w400,
+                letterSpacing: 1.2),
           ),
           Container(
             height: 20,
@@ -46,7 +53,7 @@ class ExpensesCard extends StatelessWidget {
           Text(
             transaction.amount.toString(),
             style: TextStyle(
-                fontSize: 24, color: Colors.black, fontWeight: FontWeight.w600),
+                fontSize: 24, color: Colors.white, fontWeight: FontWeight.w600),
           ),
         ],
       ),

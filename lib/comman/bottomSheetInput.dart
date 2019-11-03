@@ -100,12 +100,23 @@ class _BottomSheetInputState extends State<BottomSheetInput> {
       child: Container(
         margin: EdgeInsets.all(8),
         padding: EdgeInsets.fromLTRB(40, 12, 40, 12),
-        child: expense ? Text("Add Expense") : Text("Add Income"),
+        child: expense
+            ? Text(
+                "Add Expense",
+                style: TextStyle(
+                    color:
+                        expense ? Colors.deepOrange[600] : Colors.green[600]),
+              )
+            : Text(
+                "Add Income",
+                style: TextStyle(
+                    color:
+                        expense ? Colors.deepOrange[600] : Colors.green[600]),
+              ),
         decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(
               width: 1,
-              color: expense ? Colors.deepOrange[600] : Colors.green[600],
             ),
             borderRadius: BorderRadius.circular(24)),
       ),
