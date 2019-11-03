@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "329598968126",
+    "firebase_url": "https://money-app-47554.firebaseio.com",
+    "project_id": "money-app-47554",
+    "storage_bucket": "money-app-47554.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329598968126:android:21f7df86c490ff95194c6f",
+        "android_client_info": {
+          "package_name": "com.project.moneyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329598968126-pr5f9gusjslvjaj590nk11ckb33vuoa9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsqug2Mt2oqQ8_UJL-33FUHF-FfscssoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329598968126-pr5f9gusjslvjaj590nk11ckb33vuoa9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
