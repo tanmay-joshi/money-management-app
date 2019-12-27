@@ -8,12 +8,12 @@ class Transactions extends StatelessWidget {
       decoration: BoxDecoration(color: Colors.white),
       child: Column(
         children: <Widget>[
+          header("All Transactions"),
+          ListOf("All"),
           header("All Expenses"),
           ListOf("Expense"),
           header("All Income"),
           ListOf("Income"),
-          header("All Transactions"),
-          ListOf("All"),
         ],
       ),
     );

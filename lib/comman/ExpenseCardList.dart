@@ -5,7 +5,7 @@ import 'package:money_app/providers/model.dart';
 import 'package:provider/provider.dart';
 
 class ListOf extends StatelessWidget {
-  String value;
+  final String value;
 
   ListOf(this.value);
 
@@ -16,15 +16,15 @@ class ListOf extends StatelessWidget {
     List<TransactionModel> allIncome = Provider.of<Model>(context).allIncome();
     List<TransactionModel> all = Provider.of<Model>(context).allTransactions;
     List<Widget> getExpense() {
-      return allExpense.map((t) => ExpensesCard(t)).toList();
+      return allExpense.reversed.map((t) => ExpensesCard(t)).toList();
     }
 
     List<Widget> getIncome() {
-      return allIncome.map((t) => ExpensesCard(t)).toList();
+      return allIncome.reversed.map((t) => ExpensesCard(t)).toList();
     }
 
     List<Widget> getAll() {
-      return all.map((t) => ExpensesCard(t)).toList();
+      return all.reversed.map((t) => ExpensesCard(t)).toList();
     }
 
     switch (value) {

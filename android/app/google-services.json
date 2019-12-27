@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:329598968126:android:21f7df86c490ff95194c6f",
+        "mobilesdk_app_id": "1:329598968126:android:83013d96fdd6ed33194c6f",
         "android_client_info": {
-          "package_name": "com.project.moneyapp"
+          "package_name": "com.example.money_app"
         }
       },
       "oauth_client": [

@@ -89,9 +89,9 @@ class _BottomSheetInputState extends State<BottomSheetInput> {
                       TransactionModel transaction = TransactionModel(
                           amount: double.parse(amountController.text),
                           type: typeController.text);
-                      expense:
-                      expense;
-                      Provider.of<Model>(context).addExpense(transaction);
+                      expense
+                          ? Provider.of<Model>(context).addExpense(transaction)
+                          : Provider.of<Model>(context).addIncome(transaction);
                       Navigator.of(context).pop();
                     },
                   )

@@ -39,7 +39,8 @@ class ExpensesCard extends StatelessWidget {
             transaction.type,
             style: TextStyle(
                 fontSize: 16,
-                color: Colors.grey[900],
+                color:
+                    transaction.expense ? Colors.red[900] : Colors.green[900],
                 fontWeight: FontWeight.w400,
                 letterSpacing: 1.2),
           ),
@@ -47,7 +48,7 @@ class ExpensesCard extends StatelessWidget {
             height: 20,
             width: 2,
             decoration: BoxDecoration(
-              color: Colors.black26,
+              color: transaction.expense ? Colors.red[900] : Colors.green[900],
             ),
           ),
           Text(
